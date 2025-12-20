@@ -12,7 +12,6 @@
       color: #FFF;
       overflow-x: hidden;
     }
-
     .header {
       position: absolute;
       top: 20px;
@@ -33,10 +32,9 @@
       font-size: 20px;
       margin: 10px 0 0 0;
     }
-
     .main-container {
       display: flex;
-      width: 1080px;
+      width: 540px; 
       height: 2400px;
       padding: 20px;
       box-sizing: border-box;
@@ -44,7 +42,6 @@
       justify-content: space-between;
       margin: 0 auto;
     }
-
     .left-column {
       display: flex;
       flex-direction: column;
@@ -53,7 +50,7 @@
     }
 
     .left-column img {
-      width: 400px;
+      width: 200px;
       cursor: pointer;
       transition: transform 0.3s, box-shadow 0.3s;
     }
@@ -62,19 +59,18 @@
       transform: scale(1.05);
       box-shadow: 0 15px 30px rgba(0,0,0,0.5);
     }
-
     .right-column {
-      width: 1080px;
+      width: 540px;
       height: 2400px;
     }
 
     .right-column img {
-      width: 1080px;
+      width: 540px;
       height: 2400px;
       object-fit: cover;
       border-radius: 10px;
     }
-    @media (max-width: 1080px) {
+    @media (max-width: 600px) {
       .main-container {
         width: 100%;
         flex-direction: column;
@@ -82,7 +78,7 @@
       }
 
       .left-column img {
-        width: 300px;
+        width: 150px;
       }
 
       .right-column img {
@@ -93,7 +89,6 @@
   </style>
 </head>
 <body>
-
   <div class="header">
     <h1>BXTTERFLY LAND!</h1>
     <p>Posting about my projects and ideas.</p>
@@ -104,7 +99,6 @@
       <a href="#section1"><img src="bgbg.png" alt="Button 1"></a>
       <a href="#section2"><img src="gbgb.png" alt="Button 2"></a>
     </div>
-
     <div class="right-column">
       <img src="vgvg.jpg" alt="Big Right Image">
     </div>
