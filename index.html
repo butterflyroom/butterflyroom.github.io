@@ -1,3 +1,6 @@
+حتماً! 😎
+برای اینکه ستون عکس‌ها چپ‌تر قرار بگیره، کافی‌یه margin-right روی ستون متن رو کم کنیم و justify-content رو کمی تغییر بدیم. نسخه‌ی اصلاح‌شده:
+
 <!DOCTYPE html>
 <html lang="fa">
 <head>
@@ -14,11 +17,11 @@
 
     .container {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start; /* ستون عکس‌ها سمت چپ */
       align-items: center;
       height: 100vh;
-      gap: 50px;
-      padding: 20px;
+      gap: 80px; /* فاصله ستون عکس‌ها و متن */
+      padding-left: 50px; /* فاصله از چپ صفحه */
       box-sizing: border-box;
     }
 
@@ -30,7 +33,7 @@
     }
 
     .button-column img {
-      width: 150px;
+      width: 200px; 
       cursor: pointer;
       transition: transform 0.3s, box-shadow 0.3s;
     }
@@ -59,6 +62,8 @@
       .container {
         flex-direction: column;
         align-items: center;
+        gap: 30px;
+        padding-left: 0;
       }
 
       .button-column {
@@ -68,7 +73,7 @@
       }
 
       .button-column img {
-        width: 120px;
+        width: 150px;
       }
     }
   </style>
