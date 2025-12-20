@@ -7,12 +7,29 @@
        body { font-family: Tahoma, sans-serif; background-color: #221E45; text-align: center; padding-top: 50px; }
       h1 { color: #FFFFFF; }
       p { color: #454077; }
+      .image-buttons { margin-top: 40px; display: flex; justify-content: center; gap: 30px; }
+      .image-buttons img { width: 220px; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
+      .image-buttons img:hover { transform: scale(1.08); box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
    </style>
 </head>
 </body>
   <h1>BXTTERFLY LAND!</h1>
   <p>Posting about my projects and Ideas</p>
-  <button onclick="alert('Welcome')>Click</
-    button>
+   <div class="image-buttons">
+      <a href="#section1">
+         <img src="bgbg.png" alt="Picture Button 1">
+      </a>
+      <a href="#section2">
+         <img src="gbgb.png" alt="Picture Button 2">
+      </a>
+   </div>
+   <div id="section1" style="margin-top: 100px;">
+      <h2 style="color:white;">COMIC!</h2>
+      <p>Click here if you wanna read my comics</p>
+   </div>
+   <div id="section2" style="margin-top:100px;">
+      <h2 style="color:white;">GAME!</h2>
+      <p>Click here if you wanna play my games</p>
+   </div>
     </body>
     </html>
