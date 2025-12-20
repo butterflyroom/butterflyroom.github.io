@@ -10,7 +10,9 @@
       font-family: Tahoma, sans-serif;
       background-color: #221E45;
       color: #FFF;
+      overflow-x: hidden;
     }
+
     .header {
       position: absolute;
       top: 20px;
@@ -31,14 +33,18 @@
       font-size: 20px;
       margin: 10px 0 0 0;
     }
+
     .main-container {
       display: flex;
-      height: 100vh;
+      width: 1080px;
+      height: 2400px;
       padding: 20px;
       box-sizing: border-box;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
+      margin: 0 auto;
     }
+
     .left-column {
       display: flex;
       flex-direction: column;
@@ -56,62 +62,43 @@
       transform: scale(1.05);
       box-shadow: 0 15px 30px rgba(0,0,0,0.5);
     }
+
     .right-column {
-      width: 50%;
-      height: 80%;
+      width: 1080px;
+      height: 2400px;
     }
 
     .right-column img {
-      width: 100%;
-      height: 100%;
+      width: 1080px;
+      height: 2400px;
       object-fit: cover;
       border-radius: 10px;
     }
 
-    @media (max-width: 768px) {
+    /* اسکرول و ریسپانسیو ساده */
+    @media (max-width: 1080px) {
       .main-container {
+        width: 100%;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
       }
 
       .left-column img {
         width: 300px;
       }
 
-      .right-column {
-        width: 90%;
-        height: 300px;
-      }
-
-      .header h1 {
-        font-size: 40px;
-      }
-
-      .header p {
-        font-size: 16px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .left-column img {
-        width: 200px;
-      }
-
-      .header h1 {
-        font-size: 28px;
-      }
-
-      .header p {
-        font-size: 14px;
+      .right-column img {
+        width: 100%;
+        height: auto;
       }
     }
   </style>
 </head>
 <body>
+
   <div class="header">
     <h1>BXTTERFLY LAND!</h1>
-    <p>Posting about my projects and ideas!</p>
+    <p>Posting about my projects and ideas.</p>
   </div>
 
   <div class="main-container">
@@ -119,6 +106,7 @@
       <a href="#section1"><img src="bgbg.png" alt="Button 1"></a>
       <a href="#section2"><img src="gbgb.png" alt="Button 2"></a>
     </div>
+
     <div class="right-column">
       <img src="vgvg.jpg" alt="Big Right Image">
     </div>
