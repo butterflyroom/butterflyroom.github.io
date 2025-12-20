@@ -20,13 +20,11 @@
       text-align: center;
       z-index: 10;
     }
-
     .header h1 {
       color: #FFA500;
       font-size: 60px;
       margin: 0;
     }
-
     .header p {
       color: #DDD;
       font-size: 20px;
@@ -34,13 +32,14 @@
     }
     .main-container {
       display: flex;
-      width: 540px; 
+      width: 540px;
       height: 2400px;
       padding: 20px;
       box-sizing: border-box;
       align-items: flex-start;
       justify-content: space-between;
       margin: 0 auto;
+      position: relative;
     }
     .left-column {
       display: flex;
@@ -48,42 +47,41 @@
       gap: 20px;
       align-items: flex-start;
     }
-
     .left-column img {
-      width: 200px;
+      width: 400px;
       cursor: pointer;
       transition: transform 0.3s, box-shadow 0.3s;
     }
-
     .left-column img:hover {
       transform: scale(1.05);
       box-shadow: 0 15px 30px rgba(0,0,0,0.5);
     }
     .right-column {
+      position: absolute;
+      right: 0;
       width: 540px;
       height: 2400px;
     }
-
     .right-column img {
       width: 540px;
       height: 2400px;
       object-fit: cover;
       border-radius: 10px;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 1080px) {
       .main-container {
         width: 100%;
         flex-direction: column;
         align-items: center;
       }
-
       .left-column img {
-        width: 150px;
+        width: 300px;
       }
-
       .right-column img {
         width: 100%;
         height: auto;
+        position: relative;
+        right: 0;
       }
     }
   </style>
@@ -93,7 +91,6 @@
     <h1>BXTTERFLY LAND!</h1>
     <p>Posting about my projects and ideas.</p>
   </div>
-
   <div class="main-container">
     <div class="left-column">
       <a href="#section1"><img src="bgbg.png" alt="Button 1"></a>
@@ -103,6 +100,5 @@
       <img src="vgvg.jpg" alt="Big Right Image">
     </div>
   </div>
-
 </body>
 </html>
