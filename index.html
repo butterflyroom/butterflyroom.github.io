@@ -5,140 +5,124 @@
   <title>BXTTERFLY ROOM</title>
   <style>
     body {
-      font-family: Tahoma, sans-serif;
       margin: 0;
       padding: 0;
+      font-family: Tahoma, sans-serif;
       background-color: #221E45;
-      color: #FFFFFF;
+      color: #FFF;
+    }
+    .header {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 10;
     }
 
-    .container {
+    .header h1 {
+      color: #FFA500;
+      font-size: 60px;
+      margin: 0;
+    }
+
+    .header p {
+      color: #DDD;
+      font-size: 20px;
+      margin: 10px 0 0 0;
+    }
+    .main-container {
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
       height: 100vh;
-      gap: 60px;
-      padding-left: 20px;
+      padding: 20px;
       box-sizing: border-box;
+      align-items: center;
+      justify-content: space-between;
     }
-
-    .button-column {
+    .left-column {
       display: flex;
       flex-direction: column;
       gap: 20px;
       align-items: flex-start;
     }
 
-    .button-column img {
-      width: 400px !important;
+    .left-column img {
+      width: 400px;
       cursor: pointer;
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .button-column img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    .left-column img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    }
+    .right-column {
+      width: 50%;
+      height: 80%;
     }
 
-    .text-column {
-      text-align: center;
-      max-width: 600px;
-    }
-
-    .text-column h1 {
-      color: #FFA500;
-      margin-bottom: 20px;
-    }
-
-    .text-column p {
-      color: #DDD;
-      line-height: 1.5;
-    }
-
-    @media (max-width: 1600px) {
-      .button-column img {
-        width: 600px;
-      }
-    }
-
-    @media (max-width: 1200px) {
-      .button-column img {
-        width: 500px;
-      }
+    .right-column img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
     }
 
     @media (max-width: 768px) {
-      .container {
+      .main-container {
         flex-direction: column;
         align-items: center;
-        gap: 30px;
-        padding-left: 0;
+        gap: 20px;
       }
 
-      .button-column {
-        flex-direction: row;
-        gap: 15px;
-        margin-bottom: 30px;
-      }
-
-      .button-column img {
+      .left-column img {
         width: 300px;
       }
 
-      .text-column {
-        max-width: 90%;
+      .right-column {
+        width: 90%;
+        height: 300px;
+      }
+
+      .header h1 {
+        font-size: 40px;
+      }
+
+      .header p {
+        font-size: 16px;
       }
     }
 
     @media (max-width: 480px) {
-      .button-column img {
+      .left-column img {
         width: 200px;
+      }
+
+      .header h1 {
+        font-size: 28px;
+      }
+
+      .header p {
+        font-size: 14px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="button-column">
+  <div class="header">
+    <h1>BXTTERFLY LAND!</h1>
+    <p>Posting about my projects and ideas!</p>
+  </div>
+
+  <div class="main-container">
+    <div class="left-column">
       <a href="#section1"><img src="bgbg.png" alt="Button 1"></a>
       <a href="#section2"><img src="gbgb.png" alt="Button 2"></a>
     </div>
-
-    <div class="text-column">
-      <h1 style="
-  position: absolute;
-  top: 40px;      
-  left: 50%;    
-  transform: translateX(-50%);
-  color: #FFA500;
-  font-size: 60px;
-  margin: 0;
-  text-align: center;
-">
-  BXTTERFLY LAND!
-</h1>
-<p style="
-  position: absolute;
-  top: 100px;         
-  left: 50%;          
-  transform: translateX(-50%);
-  color: #DDD;
-  font-size: 20px;
-  text-align: center;
-  margin: 0;
-">
-  Posting about my projects and ideas!
-</p>
+    <div class="right-column">
+      <img src="vgvg.jpg" alt="Big Right Image">
+    </div>
   </div>
 
-  <div id="section1" style="padding: 100px; background-color: #2a1f4d;">
-    <h2>بخش اول</h2>
-    <p>اینجا محتوای دکمه اول قرار می‌گیرد.</p>
-  </div>
-
-  <div id="section2" style="padding: 100px; background-color: #3a2f5d;">
-    <h2>بخش دوم</h2>
-    <p>اینجا محتوای دکمه دوم قرار می‌گیرد.</p>
-  </div>
 </body>
 </html>
